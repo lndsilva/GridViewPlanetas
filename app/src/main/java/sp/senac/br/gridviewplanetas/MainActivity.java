@@ -25,17 +25,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        gridView = (GridView) findViewById(R.id.gridView);
+        gridView = findViewById(R.id.gridView);
 
         CustomAdapter customAdaper = new CustomAdapter();
+
         gridView.setAdapter(customAdaper);
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getApplicationContext(), GridItemActivity.class);
+
                 intent.putExtra("name", namePlanets[position]);
                 intent.putExtra("image", imagePlanets[position]);
+
                 startActivity(intent);
             }
         });
