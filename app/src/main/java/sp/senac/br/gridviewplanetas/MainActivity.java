@@ -64,15 +64,15 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            View view1 = getLayoutInflater().inflate(R.layout.row_data, null);
+            View carregaView = getLayoutInflater().inflate(R.layout.row_data, null);
 
-            TextView name = view1.findViewById(R.id.txtPlanetas);
-            ImageView image = view1.findViewById(R.id.images);
+            TextView name = carregaView.findViewById(R.id.txtPlanetas);
+            ImageView image = carregaView.findViewById(R.id.images);
 
             name.setText(namePlanets[position]);
             image.setImageResource(imagePlanets[position]);
 
-            return view1;
+            return carregaView;
         }
     }
 }

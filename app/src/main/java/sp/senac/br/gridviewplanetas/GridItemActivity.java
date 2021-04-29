@@ -32,6 +32,7 @@ public class GridItemActivity extends AppCompatActivity {
         imageView.setImageResource(receivedImage);
 
         //criar o botão de voltar na barra do appBar Layout
+        //Cuidado para não tirar a barra de aplicativos
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
@@ -40,6 +41,7 @@ public class GridItemActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
+            //se for verdadeiro a existência do icone home
             onBackPressed();
         }
 
